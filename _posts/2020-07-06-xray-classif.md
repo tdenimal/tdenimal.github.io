@@ -112,9 +112,9 @@ The reason is that the data is split into k-folds with a uniform probability dis
 
 To ensure that the model learns correctly, we need to use stratified k-fold distribution, where the class distribution is preserved in each fold.
 
-![Regular Cross-validation](/assets/images/2020-07-06-xray-classif/regular_cv.png)
+![Regular Cross-validation](/assets/images/2020-07-06-xray-classif/regular_cv.png "Regular cross-validation")
 
-![Stratified Cross-validation](/assets/images/2020-07-06-xray-classif/stratified_cv.png)
+![Stratified Cross-validation](/assets/images/2020-07-06-xray-classif/stratified_cv.png "Stratified cross-validation")
 
 
 
