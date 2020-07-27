@@ -110,20 +110,30 @@ The dataset is imbalanced 1 pneumothorax xray for 2.62 normal xrays.
 Regular k-fold crossvalidation should be avoided in presence of an unbalanced dataset. 
 The reason is that the data is split into k-folds with a uniform probability distribution.
 
-To ensure that the model learns correctly, we need to use stratified k-fold distribution, where the class distribution is preserved in each fold.
 
 ![Regular Cross-validation](/assets/images/2020-07-06-xray-classif/regular_cv.png "Regular cross-validation")
 
+To ensure that the model learns correctly, we need to use stratified k-fold distribution, where the class distribution is preserved in each fold.
+
 ![Stratified Cross-validation](/assets/images/2020-07-06-xray-classif/stratified_cv.png "Stratified cross-validation")
 
+Also, for medical data, it is essential to avoid patient overlap, i.e. same patient images in train/test or in different folds during cross-validation.
+
+Last but not least, we should assure that age and view position distribution are the same in train/test and in folds during cross-validation.
 
 
-This might work fine for data with a balanced class distribution, but when the distribution is severely skewed, it is likely that one or more folds will have few or no examples from the minority class. This means that some or perhaps many of the model evaluations will be misleading, as the model need only predict the majority class correctly.
+<br>
+WORK IN PROGRESS ....
+<br>
 
+# Modelization
+## Efficientnet
 
-# Model definition and training
+## Training loop
 
-# Tests results
+## Test Time Augmentation - TTA
+
+# Results analysis
 
 
 # What next ?
