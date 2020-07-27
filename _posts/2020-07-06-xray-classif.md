@@ -111,7 +111,7 @@ The dataset is imbalanced 1 pneumothorax xray for 2.62 normal xrays.
 
 # Tests results
 
-<iframe width="800" height="600" frameborder="0" src="https://www.comet.ml/embedded/?instanceId=vGzSVO6Lk5bHaTopuP8l4yqnf&projectId=ef4e6b5d1a4e4767b036d797f9b9bded&templateId=0WWaVPhljNXdwTApL9mtfMIkz&viewId=j1ZRx1zuXUmju7PBvRKlZEzlV"></iframe>
+<iframe width="560" height="315" frameborder="0" src="https://www.comet.ml/embedded/?instanceId=vGzSVO6Lk5bHaTopuP8l4yqnf&projectId=ef4e6b5d1a4e4767b036d797f9b9bded&templateId=0WWaVPhljNXdwTApL9mtfMIkz&viewId=j1ZRx1zuXUmju7PBvRKlZEzlV"> </iframe>
 
 # What next ?
 
