@@ -39,6 +39,8 @@ metadata.info()
 There is 12954 images in our dataset. Let's see an extract of a csv file:
 ![](/assets/images/2020-07-06-xray-classif/metadata_head.png)
 
+
+## DICOM Files and metadata
 Each dicom file contains a 1024*1024 jpg file. 
 
 
@@ -57,6 +59,31 @@ The xray result is quite different and it should be an interesting feature for o
 
 ![](/assets/images/2020-07-06-xray-classif/ap_pa_view.png)
 
+We will also select Patient Age, Patient Sex, which are obvious as features.
+Let's add a function to read the metadata from our DICOM files.
+
+```python
+def readMetaData(Dir, DF=pd.DataFrame()):
+    Files = glob(Dir+'*.dcm')
+    for file in Files:
+        ID = file.split('/')[-1][:-4]
+        DCM = pydicom.dcmread(file)
+               
+        for atr in ['PatientAge', 'PatientID', 'PatientSex',"ViewPosition"]:
+            DF.loc[ID, atr] = getattr(DCM, atr)
+
+    return DF
+trainDF = readMetaData(path_data_raw+"/dicom-images-train/", metadata)
+```
+
+```python
+trainDF.head(10)
+```
+
+![](/assets/images/2020-07-06-xray-classif/trainDF_head.png)
+
+
+## Data cleaning, missing values, outliers
 
 
 As we try to do only a binary classifier, just add a binary target column.
