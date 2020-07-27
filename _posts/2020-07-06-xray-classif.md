@@ -67,7 +67,10 @@ metadata["target"] = np.where(metadata[" EncodedPixels"] == "-1",0,1)
 Now let's check the class imbalance.
 
 ```python
-
+#Check Dataset imbalance
+x=metadata["target"].value_counts().values
+sns.barplot([0,1],x)
+plt.title('Target variable count')
 ```
 ![](/assets/images/2020-07-06-xray-classif/target_imbalance.png)
 
