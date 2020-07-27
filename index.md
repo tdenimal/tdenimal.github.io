@@ -8,7 +8,7 @@ redirect_from:
     - /about.html
 ---
 Welcome to my DataScience portfolio. <br>
-My name is Thomas, a Data Scientist at [Lyreco](https://www.lyreco.com/). 
+My name is Thomas, currently working at [Lyreco](https://www.lyreco.com/). 
 <br>
 
 ---
