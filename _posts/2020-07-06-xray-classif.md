@@ -15,7 +15,7 @@ sidebar:
     nav: sidebar-sample
 ---
 
-The goal of this project is to show a way how to train a binary classifier on Xray images, to predict if there is a pneumothorax or not. The dataset that will be used can be downloaded freely on [Kaggle](https://www.kaggle.com/c/siim-acr-pneumothorax-segmentation).
+The goal of this project is to show a way how to train a binary classifier on Xray images, to predict if there is a pneumothorax or not. The dataset used here can be downloaded freely on [Kaggle](https://www.kaggle.com/c/siim-acr-pneumothorax-segmentation).
 
 # Exploratory Data Analysis
 
@@ -122,19 +122,33 @@ Also, for medical data, it is essential to avoid patient overlap, i.e. same pati
 Last but not least, we should assure that age and view position distribution are the same in train/test and in folds during cross-validation.
 
 
-<br>
-WORK IN PROGRESS ....
-<br>
-
 # Modelization
 ## Efficientnet
 
+![Efficientnet](https://arxiv.org/pdf/1905.11946) is a new ConvNet model that is smaller and faster on inference than traditionnal ConvNets model. To define a Efficientnet we use a scaling parameter, that range from B0 to B7. Here we are going to use the smallest scaling parameter B0.
+
+![](/assets/images/2020-07-06-xray-classif/efficientnet_param_accur.png)
+
 ## Training loop
+
+### Data Augmentation
+
+
+
 
 ## Test Time Augmentation - TTA
 
+Similar to Data augmentation during Model training, Test Time Augmentation consists on making prediction on Data Augmented test images and then average the predictions. It can be considerated as an Ensemble method that is a common practice in computer vision projects. It can boost performance of a trained model.
+
+![](/assets/images/2020-07-06-xray-classif/tta.png)
+
 # Results analysis
+
+## Model results without TTA
+
+## Model results with TTA
 
 
 # What next ?
-
+## 
+## Model Interpretability
