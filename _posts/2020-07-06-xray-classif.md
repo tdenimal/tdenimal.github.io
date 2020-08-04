@@ -125,7 +125,7 @@ Last but not least, we should assure that age and view position distribution are
 # Modelization
 ## Efficientnet
 
-![Efficientnet](https://arxiv.org/pdf/1905.11946) is a new ConvNet model that is smaller and faster on inference than traditionnal ConvNets model. To define a Efficientnet we use a scaling parameter, that range from B0 to B7. Here we are going to use the smallest scaling parameter B0.
+[Efficientnet](https://arxiv.org/pdf/1905.11946) is a new ConvNet model that is smaller and faster on inference than traditionnal ConvNets model. To define a Efficientnet we use a scaling parameter, that range from B0 to B7. Here we are going to use the smallest scaling parameter B0.
 
 ![](/assets/images/2020-07-06-xray-classif/efficientnet_param_accur.png)
 
