@@ -1,6 +1,6 @@
 ---
 published: true
-title: Demand forecast on Walmart sales - EDA  - part 1 of 2
+title: [Forecast] Demand forecast on Walmart sales - EDA  - part 1 of 2
 collection: cv
 layout: single
 author_profile: true

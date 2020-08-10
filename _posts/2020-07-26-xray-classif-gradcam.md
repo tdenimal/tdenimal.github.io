@@ -1,6 +1,6 @@
 ---
 published: true
-title: Efficientnet classifier interpretation using GradCAM
+title: [Computer Vision] Efficientnet classifier interpretation using GradCAM
 collection: cv
 layout: single
 author_profile: true

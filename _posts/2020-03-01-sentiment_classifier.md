@@ -1,6 +1,6 @@
 ---
 published: true
-title: Simple sentimental classifier for review data
+title: [NLP] Simple sentimental classifier for review data
 collection: cv
 layout: single
 author_profile: true
