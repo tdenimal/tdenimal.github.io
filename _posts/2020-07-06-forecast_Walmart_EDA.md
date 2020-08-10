@@ -5,7 +5,7 @@ collection: cv
 layout: single
 author_profile: true
 read_time: true
-categories: [EDA][forecast]
+categories: [EDA][forecast][project]
 header :
     teaser : /assets/images/walmart.jpg
 comments : true
