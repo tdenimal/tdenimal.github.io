@@ -5,7 +5,7 @@ collection: cv
 layout: single
 author_profile: true
 read_time: true
-categories: [Computer_vision]
+categories: [projects]
 header :
     teaser : /assets/images/2020-07-26-xray-classif-gradcam/gradcam_1.png
 comments : true

@@ -5,7 +5,7 @@ collection: cv
 layout: single
 author_profile: true
 read_time: true
-categories: [NLP]
+categories: [projects]
 header :
     teaser : /assets/images/sentiment_analysis.jpg
 comments : true

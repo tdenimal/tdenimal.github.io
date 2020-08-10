@@ -5,10 +5,9 @@ collection: cv
 layout: single
 author_profile: true
 read_time: true
-categories: [MLOps]
+categories: [projects]
 header :
     teaser : /assets/images/web_scraping.jpg
-    image : /assets/images/web_scraping.jpg
 comments : true
 toc: true
 toc_sticky: true

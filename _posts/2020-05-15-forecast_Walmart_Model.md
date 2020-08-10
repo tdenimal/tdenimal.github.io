@@ -5,7 +5,7 @@ collection: cv
 layout: single
 author_profile: true
 read_time: true
-categories: [Forecasting]
+categories: [projects]
 header :
     teaser : /assets/images/sales_forecast.png
 comments : true
