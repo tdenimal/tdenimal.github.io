@@ -8,6 +8,7 @@ read_time: true
 categories: [MLOps]
 header :
     teaser : /assets/images/web_scraping.jpg
+    image : /assets/images/web_scraping.jpg
 comments : true
 toc: true
 toc_sticky: true
