@@ -1,11 +1,11 @@
 ---
 published: true
-title: [NLP] Simple sentimental classifier for review data
+title: Simple sentimental classifier for review data
 collection: cv
 layout: single
 author_profile: true
 read_time: true
-categories: [project]
+categories: [NLP]
 header :
     teaser : /assets/images/sentiment_analysis.jpg
 comments : true

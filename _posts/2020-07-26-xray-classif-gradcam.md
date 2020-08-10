@@ -1,11 +1,11 @@
 ---
 published: true
-title: [Computer Vision] Efficientnet classifier interpretation using GradCAM
+title: Efficientnet classifier interpretation using GradCAM
 collection: cv
 layout: single
 author_profile: true
 read_time: true
-categories: [project]
+categories: [Computer_vision]
 header :
     teaser : /assets/images/2020-07-26-xray-classif-gradcam/gradcam_1.png
 comments : true

@@ -1,11 +1,11 @@
 ---
 published: true
-title: [Computer Vision] Pneumothorax xray classifier on Pytorch
+title: Pneumothorax xray classifier on Pytorch
 collection: cv
 layout: single
 author_profile: true
 read_time: true
-categories: [project]
+categories: [Computer_vision]
 header :
     teaser : /assets/images/xray.jpg
 comments : true

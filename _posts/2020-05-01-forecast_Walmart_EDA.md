@@ -1,11 +1,11 @@
 ---
 published: true
-title: [Forecast] Demand forecast on Walmart sales - EDA  - part 1 of 2
+title: Demand forecast on Walmart sales - EDA  - part 1 of 2
 collection: cv
 layout: single
 author_profile: true
 read_time: true
-categories: [project]
+categories: [Forecasting]
 header :
     teaser : /assets/images/walmart.jpg
 comments : true
