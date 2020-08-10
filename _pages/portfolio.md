@@ -6,7 +6,6 @@ author_profile: true
 ---
 
 A series of projects that i have realized - mostly about Machine Learning, NLP, Computer Vision, Data Engineering, MLOps best practices.
-Push in progress... :smile:
 
 <br>
 <br>
