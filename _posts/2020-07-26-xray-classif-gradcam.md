@@ -1,6 +1,6 @@
 ---
 published: true
-title: Efficientnet classifier interpretation using GradCAM
+title: Efficientnet classifier interpretation using GradCAM - part 3 of 3
 collection: cv
 layout: single
 author_profile: true
