@@ -23,11 +23,19 @@ The project will be divided in 3 parts, in part 1 ( this one ), we will make an 
 
 Pneumothorax is an abnormal collection of air in the pleural space that causes an uncoupling of the lung from the chest wall. It can precipitate a life-threatening emergency due to lung collapse and respiratory or circulatory distress.
 
+![](/assets/images/2020-07-06-xray-classif_EDA/pneumo_info1.jpg)
+
+On some critical pneumothorax (tension pneumothorax), the region called mediastinum, containing heart,esophagus, the trachea especially, can be shifted to the other side, compressing the opposite lung. ( see the preceding infographic )
+
+![](/assets/images/2020-07-06-xray-classif_EDA/pneumo_info2.jpg)
+
+The preceding xray shows the same tension pneumothorax as before.
+
 A pneumothorax can be caused by a blunt or penetrating chest injury, certain medical procedures, or damage from underlying lung disease.
 
-![](/assets/images/2020-07-06-xray-classif_EDA/pneumo_info.jpg)
-
 Treatment for a pneumothorax usually involves inserting a needle or chest tube between the ribs to remove the excess air. However, a small pneumothorax may heal on its own.
+
+
 
 # Exploratory Data Analysis
 
