@@ -135,6 +135,9 @@ I choosed pneumothorax, to create the project directory for the [following work]
 ```bash
 
 kedro new
+
+
+
 Project Name:
 =============
 Please enter a human readable name for your new project.
@@ -168,3 +171,12 @@ A best-practice setup includes initialising git and creating a virtual environme
 
 ```
 
+
+
+Install project default dependencies:
+
+```bash
+
+kedro install
+
+```
