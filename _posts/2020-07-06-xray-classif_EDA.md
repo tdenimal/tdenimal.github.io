@@ -17,7 +17,10 @@ sidebar:
 
 The goal of this project is to show a way how to train a binary classifier on Xray images, to predict if there is a pneumothorax or not. The dataset used here can be downloaded freely on [Kaggle](https://www.kaggle.com/c/siim-acr-pneumothorax-segmentation).
 
-The project will be divided in 3 parts, in part 1 ( this one ), we will make an exploratory data analysis (EDA) to understand better the different datasets and what the target means ( Pneumothorax ). In part 2, we will define train and test different classifier models. Last buit not least, in part 3, we will implement Gradcam, which is a method to make computer vision algorithms results more interpretable.
+The project will be divided in 3 parts, in part 1 ( this one ), we will make an exploratory data analysis (EDA) to understand better the different datasets and what the target means ( Pneumothorax ). In part 2, we will define, train and test different binary classifier models. Last but not least, in part 3, we will implement Gradcam, which is a method to make computer vision algorithms results more interpretable.
+
+This project code is available on Github and has been packaged using [Kedro framework](https://kedro.readthedocs.io/en/stable/).
+
 
 # Target explanation - What is a Pneumothorax ?
 
@@ -35,11 +38,13 @@ A pneumothorax can be caused by a blunt or penetrating chest injury, certain med
 
 Treatment for a pneumothorax usually involves inserting a needle or chest tube between the ribs to remove the excess air. However, a small pneumothorax may heal on its own.
 
+For more information : [Pneumothorax](https://en.wikipedia.org/wiki/Pneumothorax)
 
+Now that we know what we seek, it's time to see what we have in our dataset.
 
-# Exploratory Data Analysis
+# DICOM Files
 
-The dataset consists of DICOM (Digital imaging and communications in medicine) file, which is a standard file format for medical imaging information. See the definition in [Wikipedia](https://en.wikipedia.org/wiki/DICOM). 
+The dataset consists of DICOM (Digital imaging and communications in medicine) files, which is a standard file format for medical imaging information. See the definition in [Wikipedia](https://en.wikipedia.org/wiki/DICOM). 
 <br>
 The pydicom python can be used to parse the DICOM files. There is also a csv file containing the pneumothorax zones by image, if present. The kaggle challenge was an image segmentation challenge but for the moment we will try to predict if an image contains or not a pneumothorax (binary classifier).
 <br>
