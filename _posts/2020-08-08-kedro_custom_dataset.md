@@ -1,6 +1,6 @@
 ---
 published: true
-title: Kedro for ML industrialization
+title: How to create a custom Kedro DataSet
 collection: cv
 layout: single
 author_profile: true
@@ -15,12 +15,62 @@ sidebar:
     nav: sidebar-sample
 ---
 
-In the following article, i will show how to install and use [Kedro](https://github.com/quantumblacklabs/kedro), an open source Python library that will simplify and clarify the way to define data pipelines for your projects. 
+In the following article, i will show how to create a custom dataset for  [Kedro](https://github.com/quantumblacklabs/kedro), an open source Python library for Production-Ready Machine Learning Code. 
 
-Then we will create a project and a custom kedro dataset 
- 
 
-# Install kedro
+The custom dataset will be used to read
+DICOM files and produce image and CSV datasets which are native Kedro datasets.
+
+This article is linked to  my article on [how to create a kedro project](https://tdenimal.github.io/projects/kedro/) and my project on [pneumothorax classifier](https://tdenimal.github.io/projects/xray-classif_EDA/), you will find more informations on the DICOM dataset there.
+
+
+To be able to read and extract data from DICOM files, we will use the [pydicom](https://github.com/pydicom/pydicom) library.
+
+
+
+# DICOMDataSet class
+
+```python
+from typing import Any, Dict, List
+
+import numpy as np
+
+from kedro.io import AbstractDataSet
+
+
+class DICOMDataSet(AbstractDataSet):
+    """``DICOMDataSet`` loads / save DICOM file from a given filepath as Image DataSet and CSV DataSet using pydicom library.
+
+    Example:
+    ::
+
+        >>> DICOMDataSet(filepath='/img/file/path.dcm')
+    """
+
+    def __init__(self, filepath: str):
+        """Creates a new instance of DICOMDataSet to load / save DICOM file at the given filepath.
+
+        Args:
+            filepath: The location of the DICOM file to load / save data.
+        """
+        self._filepath = filepath
+
+    def _load(self) -> np.ndarray:
+        """Loads data from the image file.
+
+        Returns:
+            Data from the image file as a numpy array.
+        """
+        ...
+
+    def _save(self, data: np.ndarray) -> None:
+        """Saves image data to the specified filepath"""
+        ...
+
+    def _describe(self) -> Dict[str, Any]:
+        """Returns a dict that describes the attributes of the dataset"""
+        ...
+```
 
 First create a new  conda virtual environment :
 kedro is compatible with python 3.6, 3.7 and 3.8 versions. Here i choosed 3.7.
@@ -69,7 +119,7 @@ kedro_viz: 3.4.0 (hooks:global,line_magic)
 
 ```
 
-# Create your Data Science project directory
+# Create your Data Science project
 
 We are going to create our datascience project directory using Kedro. It will initialize all the needed directories using a [cookiecutter](https://cookiecutter.readthedocs.io/) template.
 
@@ -118,30 +168,3 @@ A best-practice setup includes initialising git and creating a virtual environme
 
 ```
 
-# GIT init 
-
-As a best practice, you should add your newly created project directory to git right after creation:
-
-```bash
-
-cd pneumothorax
-
-git init
-
-git add --all
-
-git commit
-```
-
-If you are a github user, you can create a repository with the same name on github and then push your local git :
-
-```bash
-
-git remote add origin git@github.com:tdenimal/${PWD##*/}
-
-git push -u origin master
-```
-
-# Defining Data pipeline
-
-Our pipeline is using DICOMDataSet, to be able to read DICOM files and extract ImageDataSet and CSVDataSet from it. DICOMDataSet is a custom Kedro DataSet, you can see how it was created in the [following article](https://tdenimal.github.io/projects/kedro_custom_dataset/)
