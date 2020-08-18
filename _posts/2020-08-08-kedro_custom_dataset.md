@@ -30,46 +30,66 @@ To be able to read and extract data from DICOM files, we will use the [pydicom](
 
 # DICOMDataSet class
 
+
+This is the whole custom dataset class we are going to create. I will explain each part. One remark th
+
 ```python
-from typing import Any, Dict, List
-
 import numpy as np
+import pandas as pd
 
-from kedro.io import AbstractDataSet
+import pydicom
+
+# PIL is the package from Pillow
+from PIL import Image
 
 
 class DICOMDataSet(AbstractDataSet):
-    """``DICOMDataSet`` loads / save DICOM file from a given filepath as Image DataSet and CSV DataSet using pydicom library.
-
-    Example:
-    ::
-
-        >>> DICOMDataSet(filepath='/img/file/path.dcm')
-    """
-
     def __init__(self, filepath: str):
-        """Creates a new instance of DICOMDataSet to load / save DICOM file at the given filepath.
+        """Creates a new instance of DICOMDataSet to load / save image data for given filepath.
 
         Args:
             filepath: The location of the DICOM file to load / save data.
         """
-        self._filepath = filepath
+        
+        # parse the path and protocol (e.g. file, http, s3, etc.)
+        protocol, path = get_protocol_and_path(filepath)
+        self._protocol = protocol
+        self._filepath = PurePosixPath(path)
+        self._fs = fsspec.filesystem(self._protocol)
 
-    def _load(self) -> np.ndarray:
-        """Loads data from the image file.
+    def _load(self) -> (pd.DataFrame,np.ndarray):
+        """Loads data from the DICOM file.
 
         Returns:
-            Data from the image file as a numpy array.
+            Metadata from the DICOM file as a pandas Dataframe,
+            Image data  as a numpy array
         """
-        ...
+        # using get_filepath_str ensures that the protocol and path are appended correctly for different filesystems
+        load_path = get_filepath_str(self._filepath, self._protocol)
+        with self._fs.open(load_path) as f:
+            ds = pydicom.dcmread(f)
+
+            df = pd.DataFrame.from_records([(el.name,el.value) for el in ds if el.name not in ['Pixel Data', 'File Meta Information Version']])
+            df = df.T
+            df.columns = df.iloc[0]
+            df = df.iloc[1:]
+            pixel_array = ds.pixel_array
+            return (df,pixel_array)
+    
 
     def _save(self, data: np.ndarray) -> None:
         """Saves image data to the specified filepath"""
-        ...
+        return None
 
+    
     def _describe(self) -> Dict[str, Any]:
-        """Returns a dict that describes the attributes of the dataset"""
-        ...
+        """Returns a dict that describes the attributes of the dataset.
+        """
+        return dict(
+            filepath=self._filepath,
+            protocol=self._protocol
+        )
+
 ```
 
 First create a new  conda virtual environment :
@@ -180,3 +200,4 @@ Install project default dependencies:
 kedro install
 
 ```
+
