@@ -31,7 +31,7 @@ To be able to read and extract data from DICOM files, we will use the [pydicom](
 # DICOMDataSet class
 
 
-This is the whole custom dataset class we are going to create. I will explain each part. One remark th
+This is the whole custom dataset class we are going to create. I will explain each part. One remark though, we are not going to implement the save part of the dataset class, as it will be not used in our project and it is not very common to write DICOM files in a ML project.
 
 ```python
 import numpy as np
@@ -92,112 +92,86 @@ class DICOMDataSet(AbstractDataSet):
 
 ```
 
-First create a new  conda virtual environment :
-kedro is compatible with python 3.6, 3.7 and 3.8 versions. Here i choosed 3.7.
-```bash
-conda create -n kedro_project python=3.7
-```
+## init of instance
 
-Then activate it
-```bash
-conda activate kedro_project
-```
+```python
+def __init__(self, filepath: str):
+        """Creates a new instance of DICOMDataSet to load / save image data for given filepath.
 
-Install kedro from conda-forge repository:
-
-
-```bash
-conda install -c conda-forge kedro
-```
-
-Install also kedro-viz plugin, very usefull to display your data pipelines:
-
-## Install kedro-viz plugin
-
-```bash
-pip install kedro-viz
-```
-
-Verify the installation:
-
-```bash
-kedro info
-
- _            _
-| | _____  __| |_ __ ___
-| |/ / _ \/ _` | '__/ _ \
-|   <  __/ (_| | | | (_) |
-|_|\_\___|\__,_|_|  \___/
-v0.16.2
-
-kedro allows teams to create analytics
-projects. It is developed as part of
-the Kedro initiative at QuantumBlack.
-
-Installed plugins:
-kedro_viz: 3.4.0 (hooks:global,line_magic)
+        Args:
+            filepath: The location of the DICOM file to load / save data.
+        """
+        
+        # parse the path and protocol (e.g. file, http, s3, etc.)
+        protocol, path = get_protocol_and_path(filepath)
+        self._protocol = protocol
+        self._filepath = PurePosixPath(path)
+        self._fs = fsspec.filesystem(self._protocol)
 
 ```
 
-# Create your Data Science project
+This part is quite the same for all custom datasets, we store the filepath and the protocol (e.g. file, http, s3, etc.) used to access the dataset.
 
-We are going to create our datascience project directory using Kedro. It will initialize all the needed directories using a [cookiecutter](https://cookiecutter.readthedocs.io/) template.
+## load of instance
 
-First go to the directory where you're used to create your projects repos ( mine is /home/tdenimal/Dev )
+```python
+def _load(self) -> (pd.DataFrame,np.ndarray):
+        """Loads data from the DICOM file.
 
-```bash
-cd /home/tdenimal/Dev
-```
+        Returns:
+            Metadata from the DICOM file as a pandas Dataframe,
+            Image data  as a numpy array
+        """
+        # using get_filepath_str ensures that the protocol and path are appended correctly for different filesystems
+        load_path = get_filepath_str(self._filepath, self._protocol)
+        with self._fs.open(load_path) as f:
+            ds = pydicom.dcmread(f)
 
-Then create project and choose the project name,  leave the other choices at their default value.
-I choosed pneumothorax, to create the project directory for the [following work](https://tdenimal.github.io/projects/xray-classif_EDA/).
-
-```bash
-
-kedro new
-
-
-
-Project Name:
-=============
-Please enter a human readable name for your new project.
-Spaces and punctuation are allowed.
- [New Kedro Project]: pneumothorax
-
-Repository Name:
-================
-Please enter a directory name for your new project repository.
-Alphanumeric characters, hyphens and underscores are allowed.
-Lowercase is recommended.
- [pneumothorax]: 
-
-Python Package Name:
-====================
-Please enter a valid Python package name for your project package.
-Alphanumeric characters and underscores are allowed.
-Lowercase is recommended. Package name must start with a letter or underscore.
- [pneumothorax]: 
-
-Generate Example Pipeline:
-==========================
-Do you want to generate an example pipeline in your project?
-Good for first-time users. (default=N)
- [y/N]: 
-
-Change directory to the project generated in /home/tdenimal/Dev/pneumothorax
-
-A best-practice setup includes initialising git and creating a virtual environment before running `kedro install` to install project-specific dependencies. Refer to the Kedro documentation: https://kedro.readthedocs.io/
-
+            df = pd.DataFrame.from_records([(el.name,el.value) for el in ds if el.name not in ['Pixel Data', 'File Meta Information Version']])
+            df = df.T
+            df.columns = df.iloc[0]
+            df = df.iloc[1:]
+            pixel_array = ds.pixel_array
+            return (df,pixel_array)
 
 ```
 
+This is definitively the most important part of the class. The load method will be used  each time we access the dataset.
+We will use the pydicom library to read the .dcm files.
 
+```python
+ds = pydicom.dcmread(f)
+```
+the dcmread method from pydicom library, will be used to read the contents of the dcm file and create a pydicom.dataset.FileDataset class.
+see [pydicom dcmread](https://pydicom.github.io/pydicom/dev/reference/generated/pydicom.filereader.dcmread.html).
 
-Install project default dependencies:
+The pydicom.dataset.FileDataset is iterable and we can retrieve each dcm metadata value and the pixel_array that corresponds to the image of xray stored.
 
-```bash
-
-kedro install
-
+```python
+df = pd.DataFrame.from_records([(el.name,el.value) for el in ds if el.name not in ['Pixel Data', 'File Meta Information Version']])
+            df = df.T
+            df.columns = df.iloc[0]
+            df = df.iloc[1:]
+            pixel_array = ds.pixel_array
+            return (df,pixel_array)
 ```
 
+We will retrieve all metadata info in a pandas DataFrame, and the xray image in the form of a numpy.ndarray, and then return it.
+
+
+
+## describe
+
+
+```python
+def _describe(self) -> Dict[str, Any]:
+        """Returns a dict that describes the attributes of the dataset.
+        """
+        return dict(
+            filepath=self._filepath,
+            protocol=self._protocol
+        )
+```
+This method is mandatory and will be called each time we try to execute a .head() method on a kedro dataset.
+Here we just return a dictionary containing the protocol and the filepath of the dataset on disk.
+ 
