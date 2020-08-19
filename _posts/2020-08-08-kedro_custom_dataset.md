@@ -156,7 +156,7 @@ df = pd.DataFrame.from_records([(el.name,el.value) for el in ds if el.name not i
             return (df,pixel_array)
 ```
 
-We will retrieve all metadata info in a pandas DataFrame, and the xray image in the form of a numpy.ndarray, and then return it.
+We will retrieve all metadata info in a pandas DataFrame, and the xray image in the form of a numpy.ndarray, and then return them a a tuple.
 
 
 
@@ -175,3 +175,23 @@ def _describe(self) -> Dict[str, Any]:
 This method is mandatory and will be called each time we try to execute a .head() method on a kedro dataset.
 Here we just return a dictionary containing the protocol and the filepath of the dataset on disk.
  
+# add dataset to kedro data catalog
+
+## read a single file
+
+
+```bash
+dicom_single:
+    type: pneumothorax.io.datasets.dicom_dataset.DICOMDataSet
+    filepath: data/01_raw/dicom-images-train/1.2.276.0.7230010.3.1.4.8323329.300.1517875162.258081.dcm
+```
+
+## read a directory of files
+
+```bash
+dicom_train:
+    type: PartitionedDataSet
+    dataset: pneumothorax.io.datasets.dicom_dataset.DICOMDataSet
+    path: data/01_raw/dicom-images-train
+    filename_suffix: ".dcm"
+```
