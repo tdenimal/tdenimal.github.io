@@ -193,7 +193,7 @@ dicom_single:
 
 ## Read whole directory
 
-To read a whole directory of files, set the type to *PartitionedDataSet*. Define *dataset* parameter to the *DICOMDataSet* type and set *path* to the directory containing our dcm files.
+To read a whole directory of files, set the type to *PartitionedDataSet*. Define *dataset* parameter to the *DICOMDataSet* type and set *path* to the directory containing our dcm files. *filename_suffix* will be used to identify all the dcm files.
 
 ```bash
 dicom_train:
