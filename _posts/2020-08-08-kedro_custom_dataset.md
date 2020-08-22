@@ -112,7 +112,7 @@ def __init__(self, filepath: str):
 
 This part is quite the same for all custom datasets, we store the filepath and the protocol (e.g. file, http, s3, etc.) used to access the dataset.
 
-## load of instance
+## Load method
 
 ```python
 def _load(self) -> (pd.DataFrame,np.ndarray):
@@ -160,7 +160,7 @@ We will retrieve all metadata info in a pandas DataFrame, and the xray image in 
 
 
 
-## describe
+## Describe method
 
 
 ```python
@@ -175,10 +175,15 @@ def _describe(self) -> Dict[str, Any]:
 This method is mandatory and will be called each time we try to execute a .head() method on a kedro dataset.
 Here we just return a dictionary containing the protocol and the filepath of the dataset on disk.
  
-# add dataset to kedro data catalog
+# Add dataset to kedro data catalog
 
-## read a single file
 
+When you add a custom dataset ( same thing for regular ones) you have 2 options : defining only 1 file or a directory. For our dcm files option 2 is the way to go as we have more than 12k dcm files to extract.
+
+
+## Read a single file
+
+To read a single dcm file, just define the type and filepath.
 
 ```bash
 dicom_single:
@@ -186,7 +191,9 @@ dicom_single:
     filepath: data/01_raw/dicom-images-train/1.2.276.0.7230010.3.1.4.8323329.300.1517875162.258081.dcm
 ```
 
-## read a directory of files
+## Read whole directory
+
+To read a whole directory of files, set the type to *PartitionedDataSet*. Define *dataset* parameter to the *DICOMDataSet* type and set *path* to the directory containing our dcm files.
 
 ```bash
 dicom_train:
