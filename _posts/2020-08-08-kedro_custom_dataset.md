@@ -7,7 +7,7 @@ author_profile: true
 read_time: true
 categories: [projects]
 header :
-    teaser : /assets/images/kedro_banner.png
+    teaser : /assets/images/kedro_banner2.png
 comments : true
 toc: true
 toc_sticky: true
