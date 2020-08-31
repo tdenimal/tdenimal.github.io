@@ -20,7 +20,7 @@ title                    : "Datascience Portfolio"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Thomas DENIMAL"
-description              : "Welcome to my Datascience Portfolio. Here you will find my past/current Datascience projects. Feel free to contact me for any questions/feedback."
+description              : "Hi there ! My name is Thomas DENIMAL and welcome to my Datascience Portfolio. Here you will find my past/current Datascience projects. Feel free to contact me for any questions/feedback."
 url                      : "https://tdenimal.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
