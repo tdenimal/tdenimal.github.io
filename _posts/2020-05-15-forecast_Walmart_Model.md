@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 title: Demand forecast on Walmart sales - Model  - part 2 of 2
 collection: cv
 layout: single

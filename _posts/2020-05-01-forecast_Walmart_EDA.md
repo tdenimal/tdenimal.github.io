@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 title: Demand forecast on Walmart sales - EDA  - part 1 of 2
 collection: cv
 layout: single

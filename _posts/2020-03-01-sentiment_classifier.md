@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 title: Simple sentimental classifier for review data
 collection: cv
 layout: single
