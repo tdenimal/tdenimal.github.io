@@ -24,14 +24,18 @@ After my Master's degree graduation, i decided to move to Paris, the best place 
 
 # 2008 - 2017 : From confirmation to expertise in RDBMS:
 
-In 2008, i had the opportunity to work as a DBA for one of the biggest French retail group : Auchan (#18 retailer in the world in 2018). At that time, retail industry was changing due to the emergence of smartphones (first iphone was released just one year ago). I was in charge of the oracle databases for the Auchan.fr website and Auchan drive stores. At that time, Auchan Drive store were a huge revolution where customers could shop online and pick it up within 5 minutes (guaranteed !) in the store of their choice.
+In 2008, i had the opportunity to work as a DBA for one of the biggest French retail group : Auchan (#18 retailer in the world in 2018). At that time, Retail industry was forced to adapt to the new digital world as consumers habits were changing  (first iphone was released just one year ago). I was in charge of the oracle databases for the Auchan.fr website and Auchan drive stores. At that time, Auchan Drive store were a huge revolution where customers could shop online and pick it up within 5 minutes (guaranteed !) in the store of their choice.
 
-It was my very first time working for a retailer and it was extremely challenging as the SLA for the stores was quite high. 
+It was my very first time working for a retailer and it was extremely challenging as the SLA for the stores were quite high. 
 
-In 2010, i decided to change for another retailer, Lyreco. 
+In 2010, i decided to change for another retailer, but in the BtoB Business, Lyreco. At my arrival, i had the opportunity to participate in a deep reshape of the database environments with the implementation of the Exadata Database machine. Using my previous experiences, i was able to industrialize completely the process of database creation, reducing the time to deliver from 7 days to less than 1 day.
+
+It was a great success and most of the treatments durations involving databases were reduced greatly. 
 
 # 2017 - : Digital transformation and career shift to data science
 
 In early 2017, Lyreco decided to launch his digital transformation and i was involved, due to my database expertise, in the POC of new Big Data tools : Hadoop (Hortonworks), Spark, Vertica DB... It was at that time that i really discovered the Big Data Ecosystem and also the new roles of Data Scientist and Data engineer.
 
-At that time, i was looking for a way to be more close to the business 
+At that time, i was looking for a way to be more close to the core business of my company. As a production DBA, i was involved in every technical projects but i was really feeling like i was in a IT services company within Lyreco.
+
+The role of Data Scientist, highly cross-disciplinary from business to computer science was really attractive to me. Thus i decided to find the best way to shift to
