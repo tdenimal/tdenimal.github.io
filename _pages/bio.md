@@ -40,4 +40,4 @@ At that time, i was looking for a way to be more close to the core business of m
 
 The role of Data Scientist, highly cross-disciplinary from business to computer science was really attractive to me. Thus i decided to find the best way to shift to this role by doing a Post-Master's degree in Datascience at Telecom Paris, one of the most famous engineering schools in France.
 
-I did my Post-Master's internship in Decathlon, #4 world sport retailer in revenues
+I did my Post-Master's internship in Decathlon, #4 world sport retailer in revenues. This internship was very structuring for me: it allowed me to put into practice the knowledge acquired during my Post-Master's year. 
