@@ -32,7 +32,7 @@ In 2010, i decided to change for another retailer, but in the BtoB Business, Lyr
 
 It was a great success and most of the treatments durations involving databases were reduced greatly. 
 
-# 2017 - : Digital transformation and career shift to data science
+# 2017 - 2018 : Digital transformation and career shift to data science
 
 In early 2017, Lyreco decided to launch his digital transformation and i was involved, due to my database expertise, in the POC of new Big Data tools : Hadoop (Hortonworks), Spark, Vertica DB... It was at that time that i really discovered the Big Data Ecosystem and also the new roles of Data Scientist and Data engineer.
 
@@ -40,4 +40,8 @@ At that time, i was looking for a way to be more close to the core business of m
 
 The role of Data Scientist, highly cross-disciplinary from business to computer science was really attractive to me. Thus i decided to find the best way to shift to this role by doing a Post-Master's degree in Datascience at Telecom Paris, one of the most famous engineering schools in France.
 
-I did my Post-Master's internship in Decathlon, #4 world sport retailer in revenues. This internship was very structuring for me: it allowed me to put into practice the knowledge acquired during my Post-Master's year. 
+
+# 2018 - : Data Scientist
+
+I did my Post-Master's internship in Decathlon, #4 world sport retailer in revenues. This internship was very structuring for me: it allowed me to put into practice the knowledge acquired during my Post-Master's year.
+
