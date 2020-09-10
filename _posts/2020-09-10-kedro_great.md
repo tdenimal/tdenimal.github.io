@@ -1,6 +1,6 @@
 ---
 published: false
-title: Kedro + MLFlow - model and metrics tracking 
+title: Kedro + Great Expectations - how to test your data flow and detect data drift 
 collection: cv
 layout: single
 author_profile: true
