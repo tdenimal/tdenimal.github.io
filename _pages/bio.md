@@ -43,5 +43,8 @@ The role of Data Scientist, highly cross-disciplinary from business to computer 
 
 # 2018 - : Data Scientist
 
+During my Post-Master's, i was involved in a r&d project with Safran Engineering Services. The objective was to predict default of Helicopters Engines. Project was divided in 2 parts : part 1 was an application of Compressive Sensing Theory, a innovative signal processing technique. part 2 was to elaborate a predictive maintenance model  to detect signs of gear tooth damage  in the reconstructed signal.
+
+
 I did my Post-Master's internship in Decathlon, #4 world sport retailer in revenues. This internship was very structuring for me: it allowed me to put into practice the knowledge acquired during my Post-Master's year.
 
