@@ -38,10 +38,14 @@ In early 2017, Lyreco decided to launch his digital transformation and i was inv
 
 At that time, i was looking for a way to be more close to the core business of my company. As a production DBA, i was involved in every technical projects but i was really feeling like i was in a IT services company within Lyreco.
 
+![telecom_logo](/assets/images/bio/telecom_paris.png){: .left}
+
 The role of Data Scientist, highly cross-disciplinary from business to computer science was really attractive to me. Thus i decided to find the best way to shift to this role by doing a Post-Master's degree in Datascience at Telecom Paris, one of the most famous engineering schools in France.
 
 
 # 2018 - : Data Scientist
+
+![telecom_logo](/assets/images/bio/telecom_paris.jpg){: .left}
 
 During my Post-Master's, i was involved in a r&d project with Safran Engineering Services. The objective was to predict failure of Helicopter's engines. Project was divided in 2 parts : Part 1 was an application of Compressive Sensing Theory, a innovative signal processing technique. Part 2 was to elaborate a predictive maintenance model  to detect, for example,  signs of gear's tooths damage  in the reconstructed signal.
 
