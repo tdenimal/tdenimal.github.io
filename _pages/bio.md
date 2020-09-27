@@ -52,3 +52,5 @@ During my Post-Master's, i was involved in a r&d project with Safran Engineering
 
 I did my Post-Master's internship in Decathlon, #4 world sport retailer in revenues. This internship was very structuring for me: it allowed me to put into practice the knowledge acquired during my Post-Master's year on a Demand Forecasting project. The objective was to predict the future Demand on more than 30000 products from Decathlon's products catalogue on a 10 weeks horizon (average replenishment time). I was mainly working with  the opensource library [Gluonts](https://gluon-ts.mxnet.io/), the final solution was based on Amazon [DeepAR](https://gluon-ts.mxnet.io/api/gluonts/gluonts.model.deepar.html) , see [Arxiv](https://arxiv.org/pdf/1704.04110v3.pdf).
 
+
+
