@@ -16,11 +16,11 @@ minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Datascience Portfolio"
+title                    : "Data architecture Portfolio"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Thomas DENIMAL"
-description              : "Hi there ! My name is Thomas DENIMAL and welcome to my Datascience Portfolio. Here you will find my past/current machine learning, deep learning and MLOps projects. Feel free to contact me for any questions/feedback."
+description              : "Hi there ! My name is Thomas DENIMAL and welcome to my data architecture portfolio. Here you will find my past/current Data architecture project or studies, and past DataScience/ML Engineering projects. Feel free to contact me for any questions/feedback."
 url                      : "https://tdenimal.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -95,7 +95,7 @@ analytics:
 author:
   name             : "Thomas DENIMAL"
   avatar           : "/assets/images/photo.png"
-  bio              : "Data Scientist / ML Engineer"
+  bio              : "Data architect"
   location         : "Valenciennes"
   email            : "thomas.denimal@gmail.com"
   links:
