@@ -1,11 +1,11 @@
 ---
 layout: archive
-title: "Portfolio and projects"
+title: "Projects and studies"
 permalink: /projects/
 author_profile: true
 ---
 
-A series of projects that i have realized - mostly about Machine Learning, NLP, Computer Vision, Data Engineering, MLOps best practices.
+A series of projects and studies, Data architecture but also about Machine Learning, NLP, Computer Vision, Data Engineering, MLOps best practices.
 
 <br>
 <br>
