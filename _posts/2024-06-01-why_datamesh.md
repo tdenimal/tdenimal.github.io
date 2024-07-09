@@ -25,7 +25,7 @@ This decentralization also allows for greater accountability, as the teams with 
 It was first described by Zhamak Dehghani as a set of four principles that guide its implementation [2](#Dehghani2023). In this post, we will provide a quick introduction to the Data Mesh concept, describing each of its four principles.
 
 
-## Four Principles of Data Mesh
+# Four Principles of Data Mesh
 
 Data Mesh principles are the cornerstones of its implementation. These principles help to make data operations efficient at scale and are as follows:
 
@@ -63,20 +63,20 @@ Data Mesh principles are the cornerstones of its implementation. These principle
 
 
 
-## Pros of Data Mesh
+# Pros of Data Mesh
 
 - **Increased agility**: Decentralized ownership and decision-making allow teams to respond quickly to changing business needs.
 - **Improved data quality**: Domain teams are responsible for the quality of their data, leading to more accurate and consistent data across the organization.
 - **Reduced dependence on central IT teams**: Self-service data platforms empower domain teams to access, transform, and analyze data without relying on central IT teams.
 
-## Cons of Data Mesh
+# Cons of Data Mesh
 
 - **Requires cultural shift**: The shift from a centralized to a decentralized approach can be challenging and may require significant changes to organizational culture.
 - **Increased complexity**: The decentralized nature of Data Mesh can lead to increased complexity, as multiple teams are managing and curating data.
 - **Requires strong governance**: A strong federated governance framework is essential to ensure that data is used consistently across the organization.
 
 
-## Summary
+# Summary
 
 
 Data Mesh is a promising approach for managing large-scale data estates, but it requires careful planning and a strong commitment from the organization to be successful.
@@ -88,7 +88,7 @@ In summary, Data Mesh is a powerful approach to data management that empowers do
 
 In next posts we will deep dive in each of the data mesh principles.
 
-## References
+# References
 
 - [1] Dehghani, Z. (2022). Data Mesh. [Book].
 - [2] Majchrzak, J., Balnojan, S., & Siwiak, M. (2023). Data Mesh in Action. [Book].
