@@ -17,9 +17,10 @@ sidebar:
 
 # Introduction to Data Mesh: A Modern Approach to Data Management
 
-Data Mesh is a decentralized data management architecture opposed to "old-school" centralized data architectures ( and organisations) like Enterprise Datawarehouses or datalake.
+Data Mesh is a decentralized data management architecture that breaks away from the traditional centralized data architectures ( and organisations) like Enterprise Datawarehouses or datalake.
 
 Data Mesh has gained popularity in recent years by removing bottlenecks in the data value stream [1](#Dehghani2022) due to its ability to address the challenges of traditional centralized data architectures, such as slow data delivery, siloed data, and lack of alignment between technical and business domains. It allows for greater agility and autonomy for domain teams, and promotes a culture of collaboration and shared responsibility for data.
+This decentralization also allows for greater accountability, as the teams with the greatest expertise about the data are responsible for its management and maintenance.
 
 It was first described by Zhamak Dehghani as a set of four principles that guide its implementation [2](#Dehghani2023). In this post, we will provide an introduction to the Data Mesh concept, focusing on its four principles, and compare it with traditional centralized data warehousing.
 
