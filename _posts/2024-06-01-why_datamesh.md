@@ -50,14 +50,19 @@ Data Mesh principles are the cornerstones of its implementation. These principle
     > **Aggregated Data Products**: These data products combine data from multiple sources to provide a more comprehensive view. They can help in gaining insights that might not be possible with individual sources.
 
 
-3. **Federated Computational Governance**: 
-    Data Mesh promotes a federated approach to governance, where decisions are made collaboratively among the domain teams. This means that rather than having a centralized data governance team, data governance is distributed across the domain teams, who work together to ensure data consistency and quality. [3](#Dehghani2023).
 
 
-4. **Self-Serve Data Platform**: 
+3. **Self-Serve Data Platform**: 
     A self-service data platform is provided to enable domain teams to access, transform, and analyze data easily, reducing the reliance on central IT teams [2](#Dehghani2023).
 
-    The self-serve platform abstracts technical complexity, allowing users to focus on their data use cases. This platform empowers domain teams to create, manage, and consume data products easily, making data-driven decisions more quickly and effectively.
+    The self-serve platform abstracts technical complexity, allowing users to focus on their data use cases. This platform empowers domain teams to seamlessly create, manage, and consume data products, making data-driven decisions more quickly and effectively.
+
+
+4. **Federated Computational Governance**: 
+    Last but not least, Data Mesh promotes a federated approach to governance, where decisions are made collaboratively among the domain teams. This means that rather than having a centralized data governance team, data governance is distributed across the domain teams, who work together to ensure data consistency and quality. [3](#Dehghani2023).
+
+
+
 
 ## Data Mesh vs Traditional Centralized Data Warehousing
 
