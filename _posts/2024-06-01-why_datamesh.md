@@ -22,7 +22,7 @@ Data Mesh is a decentralized data management architecture that breaks away from 
 Data Mesh has gained popularity in recent years by removing bottlenecks in the data value stream [1](#Dehghani2022) due to its ability to address the challenges of traditional centralized data architectures, such as slow data delivery, siloed data, and lack of alignment between technical and business domains. It allows for greater agility and autonomy for domain teams, and promotes a culture of collaboration and shared responsibility for data.
 This decentralization also allows for greater accountability, as the teams with the greatest expertise about the data are responsible for its management and maintenance.
 
-It was first described by Zhamak Dehghani as a set of four principles that guide its implementation [2](#Dehghani2023). In this post, we will provide an introduction to the Data Mesh concept, focusing on its four principles, and compare it with traditional centralized data warehousing.
+It was first described by Zhamak Dehghani as a set of four principles that guide its implementation [2](#Dehghani2023). In this post, we will provide a quick introduction to the Data Mesh concept, describing each of its four principles.
 
 
 ## Four Principles of Data Mesh
@@ -63,11 +63,6 @@ Data Mesh principles are the cornerstones of its implementation. These principle
 
 
 
-
-## Data Mesh vs Traditional Centralized Data Warehousing
-
-Traditional centralized data warehousing involves a single, central repository where data is collected, stored, and managed by a central IT team. In contrast, Data Mesh distributes ownership and responsibility for data across the organization, enabling teams to work more independently and efficiently.
-
 ### Pros of Data Mesh
 
 - **Increased agility**: Decentralized ownership and decision-making allow teams to respond quickly to changing business needs.
@@ -90,6 +85,8 @@ Implementing a Data Mesh architecture requires a significant cultural shift and 
 
 In summary, Data Mesh is a powerful approach to data management that empowers domains, treats data as a product, and promotes self-service capabilities. By understanding its principles, benefits, and self-service features, organizations can unlock the full potential of their data assets and gain a competitive edge in today's data-driven world.
 
+
+In next posts we will deep dive in each of the data mesh principles.
 
 ## References
 
