@@ -29,37 +29,40 @@ It was first described by Zhamak Dehghani as a set of four principles that guide
 
 Data Mesh principles are the cornerstones of its implementation. These principles help to make data operations efficient at scale and are as follows:
 
-1. **Domain Ownership** : 
-    Data Mesh encourages domain teams to take ownership of their data. This means that each domain is responsible for the quality, security, and governance of its data [3](#Dehghani2023).
+## **Domain Ownership** : 
+Data Mesh encourages domain teams to take ownership of their data. This means that each domain is responsible for the quality, security, and governance of its data [3](#Dehghani2023).
 
-    Data Mesh is built around business domains, each with its own data, services, and teams. This alignment with business domains ensures that data is understood and managed in the context of the business, aligning technology with business strategy and domain-specific experts knowledge.
-
-
-
-2. **Domain Data as a Product**: 
-    Each domain treats its data as a product, ensuring it is well-documented, high-quality, and meets the needs of its consumers [2](#Dehghani2023).
-
-    Data should be treated as any product, with its own lifecycle, versioning, and APIs. This approach encourages the creation of reusable, discoverable, and consumable data assets.
-
-    There is different types of data products in data mesh litterature :
-
-    > **Source-Aligned Data Products**: These data products are created by the data providers and are based on the source systems. They are often used for internal operations, data validation, and quality checks. They can be consumed to feed **Consumer-Aligned Data Products** or **Aggregated Data Products**.
-
-    > **Consumer-Aligned Data Products**: These data products are built with the end user in mind, focusing on the specific needs and requirements of the consumers. They are designed to provide actionable insights and are often used in real-time decision-making processes.
-
-    > **Aggregated Data Products**: These data products combine data from multiple sources to provide a more comprehensive view. They can help in gaining insights that might not be possible with individual sources.
+Data Mesh is built around business domains, each with its own data, services, and teams. This alignment with business domains ensures that data is understood and managed in the context of the business, aligning technology with business strategy and domain-specific experts knowledge.
 
 
 
+## **Data as a Product**: 
+Each domain treats its data as a product, ensuring it is well-documented, high-quality, and meets the needs of its consumers [2](#Dehghani2023).
 
-3. **Self-Serve Data Platform**: 
-    A self-service data platform is provided to enable domain teams to access, transform, and analyze data easily, reducing the reliance on central IT teams [2](#Dehghani2023).
+Data should be treated as any product, with its own lifecycle, versioning, and APIs. This approach encourages the creation of reusable, discoverable, and consumable data assets.
 
-    The self-serve platform abstracts technical complexity, allowing users to focus on their data use cases. This platform empowers domain teams to seamlessly create, manage, and consume data products, making data-driven decisions more quickly and effectively.
+There is different types of data products in data mesh litterature :
+
+### **Source-Aligned Data Products**: 
+These data products are created by the data providers and are based on the source systems. They are often used for internal operations, data validation, and quality checks. They can be consumed to feed **Consumer-Aligned Data Products** or **Aggregated Data Products**.
+
+### **Consumer-Aligned Data Products**: 
+These data products are built with the end user in mind, focusing on the specific needs and requirements of the consumers. They are designed to provide actionable insights and are often used in real-time decision-making processes.
+
+### **Aggregated Data Products**: 
+These data products combine data from multiple sources to provide a more comprehensive view. They can help in gaining insights that might not be possible with individual sources.
 
 
-4. **Federated Computational Governance**: 
-    Last but not least, Data Mesh promotes a federated approach to governance, where decisions are made collaboratively among the domain teams. This means that rather than having a centralized data governance team, data governance is distributed across the domain teams, who work together to ensure data consistency and quality. [3](#Dehghani2023).
+
+
+## **Self-Serve Data Platform**: 
+A self-service data platform is provided to enable domain teams to access, transform, and analyze data easily, reducing the reliance on central IT teams [2](#Dehghani2023).
+
+The self-serve platform abstracts technical complexity, allowing users to focus on their data use cases. This platform empowers domain teams to seamlessly create, manage, and consume data products, making data-driven decisions more quickly and effectively.
+
+
+## **Federated Computational Governance**: 
+Last but not least, Data Mesh promotes a federated approach to governance, where decisions are made collaboratively among the domain teams. This means that rather than having a centralized data governance team, data governance is distributed across the domain teams, who work together to ensure data consistency and quality. [3](#Dehghani2023).
 
 
 
