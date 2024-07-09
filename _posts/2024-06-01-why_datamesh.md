@@ -63,13 +63,13 @@ Data Mesh principles are the cornerstones of its implementation. These principle
 
 
 
-### Pros of Data Mesh
+## Pros of Data Mesh
 
 - **Increased agility**: Decentralized ownership and decision-making allow teams to respond quickly to changing business needs.
 - **Improved data quality**: Domain teams are responsible for the quality of their data, leading to more accurate and consistent data across the organization.
 - **Reduced dependence on central IT teams**: Self-service data platforms empower domain teams to access, transform, and analyze data without relying on central IT teams.
 
-### Cons of Data Mesh
+## Cons of Data Mesh
 
 - **Requires cultural shift**: The shift from a centralized to a decentralized approach can be challenging and may require significant changes to organizational culture.
 - **Increased complexity**: The decentralized nature of Data Mesh can lead to increased complexity, as multiple teams are managing and curating data.
