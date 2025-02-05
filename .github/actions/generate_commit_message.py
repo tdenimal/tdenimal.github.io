@@ -70,7 +70,7 @@ def main():
     diff = get_code_diff()
     print(diff)
     #title, body = get_commit_message(diff)
-    subprocess.run(["git", "commit", "--amend", "-m", title, "-m", body], check=True)
+    #subprocess.run(["git", "commit", "--amend", "-m", title, "-m", body], check=True)
 
 if __name__ == "__main__":
     main()
