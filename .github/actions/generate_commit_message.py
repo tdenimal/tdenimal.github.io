@@ -1,5 +1,6 @@
 import os
 import openai
+from openai import OpenAI
 import subprocess
 
 def get_code_diff():
@@ -42,19 +43,29 @@ def get_commit_message(diff):
                "Start with 'Title:' for the title and 'Body:' for the detailed description. Here are the code changes:")
 
     # Using the ChatCompletion interface to interact with gpt-3.5-turbo
-    response = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
-        messages=[
-            {
-                "role": "system",
-                "content": context
-            },
-            {
-                "role": "user",
-                "content": f"{diff}"
-            }
-        ]
-    )
+
+    client = OpenAI(
+                    base_url="https://openrouter.ai/api/v1",
+                    api_key=os.getenv('OPENAI_API_KEY'),
+                    )
+
+    response = client.chat.completions.create(
+                    extra_headers={
+                        "HTTP-Referer": "https://tdenimal.github.io/", # Optional. Site URL for rankings on openrouter.ai.
+                        "X-Title": "tdenimal Data Architecture portfolio", # Optional. Site title for rankings on openrouter.ai.
+                        },
+                    model="deepseek/deepseek-r1:free",
+                    messages=[
+                        {
+                            "role": "system",
+                            "content": context
+                        },
+                        {
+                            "role": "user",
+                            "content": f"{diff}"
+                        }
+                    ]
+                )
     
     # Extracting the assistant's message from the response and parsing it
     message_from_assistant = response.choices[0].message['content']
@@ -69,8 +80,8 @@ def main():
     """Main function to generate and amend the commit message."""
     diff = get_code_diff()
     print(diff)
-    #title, body = get_commit_message(diff)
-    #subprocess.run(["git", "commit", "--amend", "-m", title, "-m", body], check=True)
+    title, body = get_commit_message(diff)
+    subprocess.run(["git", "commit", "--amend", "-m", title, "-m", body], check=True)
 
 if __name__ == "__main__":
     main()
