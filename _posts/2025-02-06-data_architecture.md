@@ -15,7 +15,6 @@ sidebar:
     nav: sidebar-sample
 ---
 
-
 ## Introduction
 Data Architecture is the backbone of modern data-driven enterprises. It defines how data is structured, stored, processed, and accessed to support business objectives effectively. This article provides an in-depth exploration of Data Architecture, its components, the role of a Data Architect, and its significance in enterprise systems.
 
@@ -34,23 +33,13 @@ A well-designed Data Architecture consists of several key components:
 - **Data Governance & Security**: Policies and frameworks to ensure compliance, data privacy, encryption, and access control.
 - **Data Analytics & Consumption**: Business Intelligence (BI) tools, dashboards, AI/ML applications, and reporting systems that consume processed data.
 
-## Objectives of Data Architecture
-The primary objectives of Data Architecture include:
+## Data Types in Modern Systems Architecture
+In modern systems, data exists in various forms, requiring different storage and processing techniques. These types include:
 
-- **Ensuring Data Quality**: Establishing rules and processes to maintain data integrity, accuracy, and consistency.
-- **Facilitating Data Governance**: Defining roles, policies, and standards to manage data securely and compliantly.
-- **Optimizing Data Flow**: Designing pipelines and workflows for efficient data movement across systems.
-- **Supporting Scalability**: Structuring data storage and processing to handle growth and evolving business needs.
-- **Enabling Analytics & AI**: Organizing data for effective use in business intelligence, machine learning, and decision-making.
-- **Ensuring High-Performance Transactions**: Optimizing transactional data systems to support real-time business operations, ensuring ACID compliance and low-latency queries.
-
-## What Does Data Mean in Modern Systems Architecture?
-In modern systems, data is not just structured information stored in databases but a mix of various forms, including:
-
-- **Structured Data**: Stored in relational databases (e.g., PostgreSQL, MySQL, Cloud SQL).
-- **Semi-structured Data**: JSON, XML, and log files used in web services and APIs.
-- **Unstructured Data**: Documents, images, videos, and raw sensor data.
-- **Streaming Data**: Real-time data from IoT devices, event-driven systems, and messaging platforms (e.g., Kafka, Pulsar).
+- **Structured Data**: Highly organized data that follows a predefined schema. Traditionally stored in relational databases (e.g., PostgreSQL, MySQL, Cloud SQL), but also in columnar storage formats like Parquet and Avro used in data lakes and distributed systems.
+- **Semi-structured Data**: Data that does not conform to a strict schema but still contains tags or markers to separate elements. Examples include JSON, XML, and log files. These formats are widely used in APIs, streaming platforms, and NoSQL databases.
+- **Unstructured Data**: Data that lacks a predefined structure, such as documents, images, videos, and raw sensor data. Often stored in data lakes or distributed file systems like Hadoop.
+- **Streaming Data**: Real-time data from IoT devices, event-driven systems, and messaging platforms (e.g., Kafka, Pulsar). Often processed using real-time data frameworks like Apache Flink or Spark Streaming.
 - **Transactional Data**: Business-critical data stored in OLTP databases that support e-commerce transactions, financial records, and customer management systems.
 
 Data in modern architecture often follows a **layered approach** (e.g., Staging → Master → Hub) to ensure transformation, validation, and governance at different stages of data processing.
@@ -102,6 +91,7 @@ Data Architecture is not just about analytics but also plays a fundamental role 
 5. The Open Group. (2009). *TOGAF 9.1: The Open Group Architecture Framework*.
 6. Fowler, M. (2002). *Patterns of Enterprise Application Architecture*. Addison-Wesley.
 7. Dehghani, Z. (2021). *Data Mesh: Delivering Data-Driven Value at Scale*. O'Reilly.
+
 
 
 
