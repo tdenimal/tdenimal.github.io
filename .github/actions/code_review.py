@@ -119,11 +119,13 @@ def main():
     # Get the changed files in the pull request
     files = get_changed_files(pr)
 
+    print(files)
+
     # Send the files to OpenAI for review
-    review = send_to_openai(files)
+    #review = send_to_openai(files)
 
     # Post the review as a comment on the pull request
-    post_comment(pr, review)
+    #post_comment(pr, review)
 
 if __name__ == "__main__":
     main()  # Execute the main function
