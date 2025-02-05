@@ -23,7 +23,7 @@ author: "Your Name"
 ---
 
 ## Introduction
-Data Architecture is the backbone of modern data-driven enterprises. It defines how data is structured, stored, processed, and accessed to support business objectives effectively. This article provides an in-depth exploration of Data Architecture, its components, the role of a Data Architect, and its significance in enterprise systems.
+Data Architecture is the backbone of modern data-driven enterprises. It defines how data is structured, stored, processed, and accessed to support business objectives effectively. This article provides an introduction of Data Architecture, its components, the role of a Data Architect, and its significance in enterprise systems.
 
 ## What is Data Architecture?
 Data Architecture is the blueprint that defines how data is collected, stored, processed, and utilized within an organization. It provides a structured framework to ensure data is managed efficiently, securely, and in alignment with business objectives. Data Architecture bridges the gap between business strategy and data management, ensuring data assets are accessible, reliable, and scalable.
@@ -32,7 +32,7 @@ Data Architecture is the blueprint that defines how data is collected, stored, p
 A well-designed Data Architecture consists of several key components:
 
 - **Data Sources**: The origin of data, including databases, APIs, streaming services, IoT devices, and external data providers.
-- **Data Storage**: Repositories where data is stored, including relational databases (PostgreSQL, MySQL), NoSQL databases (MongoDB, Cassandra), data lakes, and data warehouses.
+- **Data Storage**: Repositories where data is stored, including relational databases (Oracle, PostgreSQL, MySQL), NoSQL databases (MongoDB, Cassandra), data lakes, and data warehouses.
 - **Data Processing**: The transformation, cleansing, and aggregation of data through ETL (Extract, Transform, Load) or ELT pipelines using tools like Apache Spark, Airflow, or Spring Batch.
 - **Data Integration**: Mechanisms to ensure seamless data flow between systems, including APIs, message brokers (Kafka, RabbitMQ), and middleware solutions.
 - **Data Governance & Security**: Policies and frameworks to ensure compliance, data privacy, encryption, and access control.
