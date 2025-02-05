@@ -176,7 +176,9 @@ A **Data Architect** is needed when:
 - **Mission-critical transaction systems** need optimization for scalability and resilience.
 
 ## Conclusion
-Data Architecture is not just about analytics but also plays a fundamental role in ensuring reliable, scalable, and high-performing transactional systems. By carefully designing architectures that support both OLTP and OLAP workloads, organizations can achieve operational efficiency, compliance, and data-driven insights.
+Data Architecture is not just about analytics but also plays a fundamental role in ensuring reliable, scalable, and high-performing transactional systems. By carefully designing data architectures that support both OLTP and OLAP workloads, organizations can achieve operational efficiency, compliance, and data-driven insights.
+
+Let's talk about the one who is designing the data architecture in a specific post : the Data Architect
 
 ## References
 
