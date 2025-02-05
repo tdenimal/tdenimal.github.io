@@ -4,7 +4,7 @@ name: Generate Commit Message
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   generate_message:
