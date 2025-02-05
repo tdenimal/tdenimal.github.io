@@ -1,12 +1,10 @@
 import os
 import openai
+from openai import OpenAI
 from github import Github
 import git
 import json
 import textwrap
-
-# Load OpenAI API key from environment
-openai.api_key = os.getenv('OPENAI_API_KEY')
 
 # Set the maximum token limit for GPT-4
 TOKEN_LIMIT = 4000
@@ -70,10 +68,19 @@ def send_to_openai(files):
     chunks = textwrap.wrap(code, TOKEN_LIMIT)
 
     reviews = []
+    client = OpenAI(
+                    base_url="https://openrouter.ai/api/v1",
+                    api_key=os.getenv('OPENAI_API_KEY'),
+                    )
+    
     for chunk in chunks:
         # Send a message to OpenAI with each chunk of the code for review
-        message = openai.ChatCompletion.create(
-            model="gpt-3.5-turbo",
+        message = client.chat.completions.create(
+            extra_headers={
+                        "HTTP-Referer": "https://tdenimal.github.io/", # Optional. Site URL for rankings on openrouter.ai.
+                        "X-Title": "tdenimal Data Architecture portfolio", # Optional. Site title for rankings on openrouter.ai.
+                        },
+            model="deepseek/deepseek-r1:free",
             messages=[
                 {
                     "role": "user",
@@ -83,7 +90,7 @@ def send_to_openai(files):
         )
 
         # Add the assistant's reply to the list of reviews
-        reviews.append(message['choices'][0]['message']['content'])
+        reviews.append(message.choices[0].message.content)
 
     # Join all the reviews into a single string
     review = "\n".join(reviews)
