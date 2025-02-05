@@ -62,10 +62,10 @@ def send_to_openai(files):
         str: The review returned by OpenAI.
     """
     # Concatenate all the files into a single string
-    code = '\n'.join(files.values())
+    article = '\n'.join(files.values())
 
-    # Split the code into chunks that are each within the token limit
-    chunks = textwrap.wrap(code, TOKEN_LIMIT)
+    # Split the article into chunks that are each within the token limit
+    chunks = textwrap.wrap(article, TOKEN_LIMIT)
 
     reviews = []
     client = OpenAI(
@@ -74,7 +74,7 @@ def send_to_openai(files):
                     )
     
     for chunk in chunks:
-        # Send a message to OpenAI with each chunk of the code for review
+        # Send a message to OpenAI with each chunk of the article for review
         message = client.chat.completions.create(
             extra_headers={
                         "HTTP-Referer": "https://tdenimal.github.io/", # Optional. Site URL for rankings on openrouter.ai.
@@ -84,7 +84,7 @@ def send_to_openai(files):
             messages=[
                 {
                     "role": "user",
-                    "content": "You are assigned as a code reviewer. Your responsibility is to review the provided code and offer recommendations for enhancement. Identify any problematic code snippets, highlight potential issues, and evaluate the overall quality of the code you review:\n" + chunk
+                    "content": "You are a Lead Data Architect. Your responsibility is to review the provided data architecture articles and offer recommendations for enhancement. Identify any missing/wrong things, highlight potential issues, propose potential articles to create following the provided one and evaluate the overall quality of the article you review:\n" + chunk
                 }
             ],
         )

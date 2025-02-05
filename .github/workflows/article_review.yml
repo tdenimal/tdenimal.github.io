@@ -1,4 +1,4 @@
-name: Code Review with OpenAI
+name: Article Review with OpenAI
 
 on:
   pull_request:
@@ -20,7 +20,7 @@ jobs:
         run: |
           pip install openai PyGithub GitPython
 
-      - name: Run review
+      - name: Run article review
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-        run: python .github/actions/code_review.py
+        run: python .github/actions/article_review.py
