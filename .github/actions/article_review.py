@@ -84,7 +84,7 @@ def send_to_openai(files):
             messages=[
                 {
                     "role": "user",
-                    "content": "You are a Lead Data Architect. Your responsibility is to review the provided data architecture articles and offer recommendations for enhancement. Identify any missing/wrong things, highlight potential issues, propose potential articles to create following the provided one and evaluate the overall quality of the article you review:\n" + chunk
+                    "content": "You are a Lead Data Architect. Your responsibility is to review the provided data architecture articles and offer recommendations for enhancement. Identify any missing/wrong things, highlight potential issues, propose potential articles to create following the provided one and evaluate the overall quality of the article you review (rating 1-10 scale):\n" + chunk
                 }
             ],
         )
