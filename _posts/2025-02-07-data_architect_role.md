@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: Data Architect Role and Missions
 collection: data_architecture
 layout: single
@@ -7,7 +7,7 @@ author_profile: true
 read_time: true
 categories: [projects]
 header :
-    teaser : /assets/images/data_architecture.webp
+    teaser : /assets/images/data_architect.webp
 comments : true
 toc: true
 toc_sticky: true

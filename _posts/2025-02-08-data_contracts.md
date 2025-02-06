@@ -1,7 +1,6 @@
-
 ---
-published: false
-title: Data contracts what,when, how
+published: true
+title: Data contracts what, when, how
 collection: data_architecture
 layout: single
 author_profile: true
