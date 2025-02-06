@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 title: Understanding Data Architecture: Objectives, Role, and Responsibilities
 collection: data_architecture
 layout: single

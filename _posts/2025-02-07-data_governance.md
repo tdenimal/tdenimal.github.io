@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 title: Data governance Best Practices
 collection: data_architecture
 layout: single

@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 title: Data Architect Role and Missions
 collection: data_architecture
 layout: single

@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 title: Data contracts what, when, how
 collection: data_architecture
 layout: single
