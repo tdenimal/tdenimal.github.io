@@ -7,7 +7,7 @@ author_profile: true
 read_time: true
 categories: [projects]
 header :
-    teaser : /assets/images/data_architecture.webp
+    teaser : /assets/images/data_governance.webp
 comments : true
 toc: true
 toc_sticky: true
