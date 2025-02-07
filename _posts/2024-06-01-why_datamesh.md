@@ -5,7 +5,7 @@ collection: data_architecture
 layout: single
 author_profile: true
 read_time: true
-categories: [projects]
+categories: [data Architecture]
 header :
     teaser : /assets/images/what-is-data-mesh-architecture.jpg
 comments : true
